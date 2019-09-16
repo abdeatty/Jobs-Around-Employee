@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="5:21 pm"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/font_regular"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/white"
+        android:text="5"
+        android:gravity="center"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_6sdp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:background="@drawable/circle_blue"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/receiver_iv"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@mipmap/ic_launcher"
+
+        android:layout_margin="@dimen/_10sdp"/>
+
+    <TextView
+        android:id="@+id/receiver_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/font_regular"
+        android:text="على بن عبدالرحمن"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/receiver_iv"/>
+
+    <TextView
+        android:id="@+id/last_message_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
+        android:text="هلا اخى كيف حالك"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/font_regular"
+        app:layout_constraintEnd_toStartOf="@id/receiver_iv"
+        app:layout_constraintTop_toBottomOf="@id/receiver_name_tv"/>
+
+    <View
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_1sdp"
+        app:layout_constraintHorizontal_bias=".2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/receiver_iv"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_60sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorPrimary"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,10 @@ import android.os.Handler;
 
 import com.example.jobsaround.R;
 import com.example.jobsaround.ui.activities.Home.HomeActivity;
+import com.example.jobsaround.ui.activities.chat.ChatActivity;
+import com.example.jobsaround.ui.activities.job_details.JobDetailsActivity;
 import com.example.jobsaround.ui.activities.job_seeker_register.JobSeekerRegisterActivity;
+import com.example.jobsaround.ui.activities.my_jobs.MyJobsActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

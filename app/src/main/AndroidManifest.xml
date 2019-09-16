@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activities.Home.HomeActivity"></activity>
+        <activity android:name=".ui.activities.chat.ChatActivity"></activity>
+        <activity android:name=".ui.activities.job_details.JobDetailsActivity" />
+        <activity android:name=".ui.activities.my_jobs.MyJobsActivity" />
+        <activity android:name=".ui.activities.Home.HomeActivity" />
         <activity android:name=".ui.activities.job_seeker_register.JobSeekerRegisterActivity" />
         <activity android:name=".ui.activities.FeesActivity" />
         <activity android:name=".ui.activities.RulesActivity" />
