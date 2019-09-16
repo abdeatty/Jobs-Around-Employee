@@ -9,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.jobsaround.R;
 
-public class MyJobsAdapter extends RecyclerView.Adapter<MyJobsAdapter.ViewHolder> {
+public class JobsAdapter extends RecyclerView.Adapter<JobsAdapter.ViewHolder> {
 
-    public MyJobsAdapter() {
+    public JobsAdapter() {
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_job_item,null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.job_item,null);
         return new ViewHolder(view);
     }
 
