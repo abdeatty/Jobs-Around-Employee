@@ -9,6 +9,7 @@ import android.os.Handler;
 import com.example.jobsaround.R;
 import com.example.jobsaround.ui.activities.Home.HomeActivity;
 import com.example.jobsaround.ui.activities.chat.ChatActivity;
+import com.example.jobsaround.ui.activities.cv.CVActivity;
 import com.example.jobsaround.ui.activities.favorite.FavoriteActivity;
 import com.example.jobsaround.ui.activities.job_details.JobDetailsActivity;
 import com.example.jobsaround.ui.activities.job_seeker_register.JobSeekerRegisterActivity;
@@ -30,7 +31,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                startActivity(new Intent(SplashActivity.this, JobSeekerRegisterActivity.class));
+                startActivity(new Intent(SplashActivity.this, CVActivity.class));
             }
         },SPLASH_TIME_OUT);
     }
