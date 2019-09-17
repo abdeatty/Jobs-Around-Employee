@@ -54,11 +54,6 @@ public class MapDialogFragment extends DialogFragment implements OnMapReadyCallb
         unbinder = ButterKnife.bind(this,view);
         initGoogleMap(savedInstanceState);
         confirmButton.setOnClickListener(this::onClick);
-        Dialog dialog = getDialog();
-
-            int width = ViewGroup.LayoutParams.MATCH_PARENT;
-            int height = ViewGroup.LayoutParams.MATCH_PARENT;
-            dialog.getWindow().setLayout(width, height);
 
 //        getDialog().getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         return view;

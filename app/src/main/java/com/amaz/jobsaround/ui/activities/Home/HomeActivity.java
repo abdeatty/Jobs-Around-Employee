@@ -107,5 +107,6 @@ public class HomeActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        attachMenuFragment();
     }
 }

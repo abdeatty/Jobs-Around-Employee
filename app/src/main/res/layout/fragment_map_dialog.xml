@@ -8,9 +8,6 @@
     android:background="@drawable/rect_white"
     tools:context=".ui.fragments.map_dialog.MapDialogFragment">
 
-    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent">-->
     <ImageView
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_50sdp"
@@ -39,6 +36,5 @@
 
         app:cornerRadius="@dimen/_20sdp" />
 
-    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 </FrameLayout>

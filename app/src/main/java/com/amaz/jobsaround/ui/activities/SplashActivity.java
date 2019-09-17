@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.amaz.jobsaround.R;
+import com.amaz.jobsaround.ui.activities.Home.HomeActivity;
 import com.amaz.jobsaround.ui.activities.job_seeker_register.JobSeekerRegisterActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -25,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                startActivity(new Intent(SplashActivity.this, JobSeekerRegisterActivity.class));
+                startActivity(new Intent(SplashActivity.this, HomeActivity.class));
             }
         },SPLASH_TIME_OUT);
     }
