@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.example.jobsaround"
+        applicationId "com.amaz.jobsaround"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
@@ -64,3 +64,7 @@ dependencies {
     //Gson
     implementation 'com.google.code.gson:gson:2.8.5'
 }
+repositories {
+    mavenCentral()
+}
+apply plugin: 'com.google.gms.google-services'

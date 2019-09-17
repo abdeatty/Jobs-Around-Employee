@@ -148,7 +148,7 @@
             <ImageView
                 android:id="@+id/map_iv"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="@dimen/_60sdp"
                 android:src="@drawable/ic_photo"
                 android:scaleType="fitXY"
                 android:layout_marginTop="@dimen/_10sdp"

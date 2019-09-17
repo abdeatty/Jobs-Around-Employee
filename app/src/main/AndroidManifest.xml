@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jobsaround">
+    package="com.amaz.jobsaround">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,17 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activities.cv.CVActivity"></activity>
-        <activity android:name=".ui.activities.favorite.FavoriteActivity" />
-        <activity android:name=".ui.activities.chat.ChatActivity" />
-        <activity android:name=".ui.activities.job_details.JobDetailsActivity" />
-        <activity android:name=".ui.activities.my_jobs.MyJobsActivity" />
-        <activity android:name=".ui.activities.Home.HomeActivity" />
-        <activity android:name=".ui.activities.job_seeker_register.JobSeekerRegisterActivity" />
-        <activity android:name=".ui.activities.FeesActivity" />
-        <activity android:name=".ui.activities.RulesActivity" />
-        <activity android:name=".ui.activities.UserTypeActivity" />
-        <activity android:name=".ui.activities.SplashActivity">
+        <activity android:name="com.amaz.jobsaround.ui.activities.cv.CVActivity"></activity>
+        <activity android:name="com.amaz.jobsaround.ui.activities.favorite.FavoriteActivity" />
+        <activity android:name="com.amaz.jobsaround.ui.activities.chat.ChatActivity" />
+        <activity android:name="com.amaz.jobsaround.ui.activities.job_details.JobDetailsActivity" />
+        <activity android:name="com.amaz.jobsaround.ui.activities.my_jobs.MyJobsActivity" />
+        <activity android:name="com.amaz.jobsaround.ui.activities.Home.HomeActivity" />
+        <activity android:name="com.amaz.jobsaround.ui.activities.job_seeker_register.JobSeekerRegisterActivity" />
+        <activity android:name="com.amaz.jobsaround.ui.activities.FeesActivity" />
+        <activity android:name="com.amaz.jobsaround.ui.activities.RulesActivity" />
+        <activity android:name="com.amaz.jobsaround.ui.activities.UserTypeActivity" />
+        <activity android:name="com.amaz.jobsaround.ui.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -27,7 +29,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.and.amaz.jobsaround.MainActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_api_key" />
     </application>
 
 </manifest>
