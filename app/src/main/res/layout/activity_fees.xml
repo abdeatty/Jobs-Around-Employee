@@ -223,9 +223,10 @@
         android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:cornerRadius="@dimen/_20sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
         android:text="التالى"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:textSize="@dimen/_14sdp"
         android:fontFamily="@font/font_regular"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

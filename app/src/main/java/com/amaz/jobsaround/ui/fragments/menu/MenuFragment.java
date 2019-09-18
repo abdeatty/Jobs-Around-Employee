@@ -131,7 +131,7 @@ public class MenuFragment extends Fragment implements OnMapReadyCallback {
                         marker.setIcon(BitmapDescriptorFactory.fromBitmap(createDrawableFromView(getContext(), markerView)));
 
                         mGoogleMap.setInfoWindowAdapter(customInfoWindowAdapter);
-                mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latLngList.get(i).latitude, latLngList.get(i).longitude), 8.0f));
+                mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latLngList.get(i).latitude, latLngList.get(i).longitude), 12.0f));
             }
 
 

@@ -35,8 +35,11 @@
 
 
         <ImageView
+            android:id="@+id/search_iv"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_search_black_24dp"
+            android:layout_height="@dimen/_30sdp"
             />
 </LinearLayout>
