@@ -40,117 +40,90 @@
         android:layout_marginTop="@dimen/_30sdp"
         app:layout_constraintTop_toBottomOf="@+id/layout">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/my_jobs_btn"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_height="@dimen/_45sdp"
+            app:strokeColor="@android:color/darker_gray"
             android:elevation="@dimen/_4sdp"
-            android:gravity="center"
-            app:boxCornerRadiusBottomEnd="@dimen/_2sdp"
-            app:boxCornerRadiusBottomStart="@dimen/_2sdp"
-            app:boxCornerRadiusTopEnd="@dimen/_2sdp"
-            app:boxCornerRadiusTopStart="@dimen/_2sdp"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/white"
-
-                android:drawableEnd="@drawable/ic_star"
-                android:drawablePadding="@dimen/_10sdp"
-                android:focusable="false"
-                android:fontFamily="@font/font_regular"
-                android:text="وظائفى"
-                android:textColor="@color/colorPrimary" />
-        </com.google.android.material.textfield.TextInputLayout>
+            app:strokeWidth="@dimen/_1sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="وظائفى"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/font_regular"
+            android:textSize="@dimen/_12sdp"
+            app:icon="@drawable/ic_star"
+            app:iconTint="@color/colorPrimary"
+            app:iconSize="@dimen/_40sdp"
+            app:iconGravity="end"
+            android:backgroundTint="@color/white"/>
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fav_btn"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_height="@dimen/_45sdp"
+            app:strokeColor="@android:color/darker_gray"
             android:elevation="@dimen/_4sdp"
-            android:gravity="center"
-            app:boxCornerRadiusBottomEnd="@dimen/_2sdp"
-            app:boxCornerRadiusBottomStart="@dimen/_2sdp"
-            app:boxCornerRadiusTopEnd="@dimen/_2sdp"
-            app:boxCornerRadiusTopStart="@dimen/_2sdp"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/white"
-
-                android:drawableEnd="@drawable/ic_star"
-                android:drawablePadding="@dimen/_10sdp"
-                android:focusable="false"
-                android:fontFamily="@font/font_regular"
-                android:text="المفضله"
-                android:textColor="@color/colorPrimary" />
-        </com.google.android.material.textfield.TextInputLayout>
+            app:strokeWidth="@dimen/_1sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="المفضله"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/font_regular"
+            android:textSize="@dimen/_12sdp"
+            app:icon="@drawable/ic_star"
+            app:iconTint="@color/colorPrimary"
+            app:iconSize="@dimen/_40sdp"
+            app:iconGravity="end"
+            android:backgroundTint="@color/white"/>
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/my_info_btn"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_height="@dimen/_45sdp"
+            app:strokeColor="@android:color/darker_gray"
             android:elevation="@dimen/_4sdp"
-            android:gravity="center"
-            app:boxCornerRadiusBottomEnd="@dimen/_2sdp"
-            app:boxCornerRadiusBottomStart="@dimen/_2sdp"
-            app:boxCornerRadiusTopEnd="@dimen/_2sdp"
-            app:boxCornerRadiusTopStart="@dimen/_2sdp"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/white"
-                android:drawableEnd="@drawable/ic_star"
-                android:drawablePadding="@dimen/_10sdp"
-                android:focusable="false"
-                android:fontFamily="@font/font_regular"
-                android:text="بيانتى"
-                android:textColor="@color/colorPrimary" />
-        </com.google.android.material.textfield.TextInputLayout>
+            app:strokeWidth="@dimen/_1sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="بيانتى"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/font_regular"
+            android:textSize="@dimen/_12sdp"
+            app:icon="@drawable/ic_star"
+            app:iconTint="@color/colorPrimary"
+            app:iconSize="@dimen/_40sdp"
+            app:iconGravity="end"
+            android:backgroundTint="@color/white"/>
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fees_btn"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_height="@dimen/_45sdp"
+            app:strokeColor="@android:color/darker_gray"
             android:elevation="@dimen/_4sdp"
-            android:gravity="center"
-            app:boxCornerRadiusBottomEnd="@dimen/_2sdp"
-            app:boxCornerRadiusBottomStart="@dimen/_2sdp"
-            app:boxCornerRadiusTopEnd="@dimen/_2sdp"
-            app:boxCornerRadiusTopStart="@dimen/_2sdp"
-            app:layout_constraintTop_toTopOf="parent">
+            app:strokeWidth="@dimen/_1sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="الرسوم"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/font_regular"
+            android:textSize="@dimen/_12sdp"
+            app:icon="@drawable/ic_star"
+            app:iconTint="@color/colorPrimary"
+            app:iconSize="@dimen/_40sdp"
+            app:iconGravity="end"
+            android:backgroundTint="@color/white"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/white"
-                android:drawableEnd="@drawable/ic_star"
-                android:drawablePadding="@dimen/_10sdp"
-                android:focusable="false"
-                android:fontFamily="@font/font_regular"
-                android:text="الرسوم"
-                android:textColor="@color/colorPrimary" />
-        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
 
     </LinearLayout>
 

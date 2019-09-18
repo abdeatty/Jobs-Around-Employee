@@ -220,6 +220,7 @@
         android:id="@+id/next_btn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
+        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:cornerRadius="@dimen/_20sdp"
         android:layout_marginStart="@dimen/_10sdp"

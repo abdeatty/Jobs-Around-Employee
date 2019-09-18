@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.amaz.jobsaround.R;
 import com.amaz.jobsaround.adapters.JobsAdapter;
+import com.amaz.jobsaround.ui.activities.job_details.JobDetailsActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,11 +32,17 @@ public class MyJobsActivity extends AppCompatActivity {
 
         unbinder = ButterKnife.bind(this);
 
+        myJobsRv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MyJobsActivity.this, JobDetailsActivity.class));
+            }
+        });
         initMyJobsRv();
     }
 
     private void initMyJobsRv() {
-        jobsAdapter = new JobsAdapter();
+        jobsAdapter = new JobsAdapter(this);
         myJobsRv.setLayoutManager(new LinearLayoutManager(this));
         myJobsRv.setHasFixedSize(false);
         myJobsRv.setAdapter(jobsAdapter);

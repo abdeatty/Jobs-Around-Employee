@@ -32,7 +32,7 @@ public class FavoriteActivity extends AppCompatActivity {
 
     private void initFavoriteRv() {
 
-        jobsAdapter = new JobsAdapter();
+        jobsAdapter = new JobsAdapter(this);
         favoriteJobsRv.setLayoutManager(new LinearLayoutManager(this));
         favoriteJobsRv.setHasFixedSize(true);
         favoriteJobsRv.setAdapter(jobsAdapter);
