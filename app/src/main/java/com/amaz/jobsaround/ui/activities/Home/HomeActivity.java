@@ -36,12 +36,11 @@ public class HomeActivity extends AppCompatActivity {
 
             case R.id.navigation_rejoins:
 
-                attachRejoinsFragment();
+                attachMenuFragment();
                 return true;
 
             case R.id.navigation_location:
-
-                attachLocationFragment();
+                attachMenuFragment();
                 return true;
 
             case R.id.navigation_profile:

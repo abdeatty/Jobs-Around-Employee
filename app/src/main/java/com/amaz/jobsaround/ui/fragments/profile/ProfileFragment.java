@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.amaz.jobsaround.R;
 import com.amaz.jobsaround.ui.activities.FeesActivity;
 import com.amaz.jobsaround.ui.activities.RulesActivity;
+import com.amaz.jobsaround.ui.activities.create_job.CreateJobActivity;
 import com.amaz.jobsaround.ui.activities.cv.CVActivity;
 import com.amaz.jobsaround.ui.activities.favorite.FavoriteActivity;
 import com.amaz.jobsaround.ui.activities.my_jobs.MyJobsActivity;
@@ -47,6 +48,13 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getContext(), CVActivity.class));
+            }
+        });
+
+        view.findViewById(R.id.add_job_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), CreateJobActivity.class));
             }
         });
         return view;

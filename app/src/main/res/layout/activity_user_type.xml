@@ -71,6 +71,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/or_label"
         android:text="باحث عن عمل"
+        android:onClick="onClick1"
         android:gravity="center"
         android:textColor="@color/colorPrimary"
         android:background="@drawable/circle_gray"/>
@@ -100,6 +101,7 @@
             android:fontFamily="@font/font_regular"
             android:textColor="@color/colorPrimary"
             android:text="سجل دخول"
+            android:onClick="onClick3"
             android:layout_marginStart="@dimen/_2sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
