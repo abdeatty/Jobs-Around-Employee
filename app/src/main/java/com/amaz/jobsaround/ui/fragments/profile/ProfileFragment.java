@@ -55,6 +55,13 @@ public class ProfileFragment extends Fragment {
                 startActivity(new Intent(getContext(), CreateJobActivity.class));
             }
         });
+
+        view.findViewById(R.id.fees_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), CVActivity.class));
+            }
+        });
         return view;
     }
 
