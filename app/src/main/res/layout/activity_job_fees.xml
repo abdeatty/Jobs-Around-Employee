@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context=".ui.activities.owner.job_fees.JobFeesActivity">
+
+
+    <include layout="@layout/tool_bar" android:id="@+id/tool_bar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/fees_amount_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="50 ريال"
+                android:background="@color/off_whit"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/colorPrimary"
+                android:padding="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/fees_hint_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="مقابل مباشره الموظف للعمل"
+                android:background="@color/off_whit"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/colorPrimary"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintTop_toBottomOf="@id/fees_amount_label"/>
+
+
+
+            <TextView
+                android:id="@+id/bank_account_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
+                android:text=" بيانات الحساب البنكى"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fees_hint_label" />
+
+
+            <TextView
+                android:id="@+id/account_number_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/bank_account_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/colorPrimary"
+                android:text="رقم الحساب:"/>
+
+            <TextView
+                android:id="@+id/account_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/bank_account_label"
+                app:layout_constraintEnd_toStartOf="@+id/account_number_label"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/colorPrimary"
+                android:text="02236565462164546545"/>
+
+
+            <TextView
+                android:id="@+id/account_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/account_number_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/colorPrimary"
+                android:text="اسم الحساب:"/>
+
+            <TextView
+                android:id="@+id/account_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/account_number_label"
+                app:layout_constraintEnd_toStartOf="@+id/account_name_label"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textSize="@dimen/_14sdp"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/colorPrimary"
+                android:text="مؤسسه قنوات الرقميه"/>
+
+
+
+            <TextView
+                android:id="@+id/iban_number_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/account_name_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/colorPrimary"
+                android:text="رقم الايبان:"/>
+
+            <TextView
+                android:id="@+id/iban_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/account_name_label"
+                app:layout_constraintEnd_toStartOf="@+id/iban_number_label"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/colorPrimary"
+                android:text="As 54654654654656565465"/>
+
+
+            <TextView
+                android:id="@+id/bank_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/iban_number_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/colorPrimary"
+                android:text="البنك:"/>
+
+            <TextView
+                android:id="@+id/bank_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/iban_number_tv"
+                app:layout_constraintEnd_toStartOf="@+id/bank_name_label"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/colorPrimary"
+                android:text="مصرف الرجحى"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/send_by_whats_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:cornerRadius="@dimen/_20sdp"
+                android:backgroundTint="@color/colorPrimary"
+                app:icon="@drawable/ic_message"
+                app:iconTint="@color/white"
+                app:iconSize="@dimen/_16sdp"
+                android:fontFamily="@font/font_regular"
+                app:iconGravity="textStart"
+                android:text="ارسال الرقم عن طريق الواتس اب"
+                app:layout_constraintTop_toBottomOf="@id/bank_name_label"/>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@id/send_by_whats_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+
+            <TextView
+                android:id="@+id/transformation_form_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="نموذج بعد التحويل"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view"/>
+
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/transformation_form_label"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1.5">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxCornerRadiusBottomEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_15sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="center"
+                            android:inputType="phone"
+                            android:padding="@dimen/_5sdp"
+                            android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:boxCornerRadiusBottomEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_15sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:padding="@dimen/_5sdp"
+                            android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:boxCornerRadiusBottomEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_15sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+                            android:padding="@dimen/_5sdp"
+                            android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:boxCornerRadiusBottomEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_15sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:padding="@dimen/_5sdp"
+                            android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        app:boxCornerRadiusBottomEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_15sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:padding="@dimen/_5sdp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="رقم الجوال"
+                        android:fontFamily="@font/font_regular"
+                        android:textSize="@dimen/_14sdp"
+                        android:gravity="end"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:textColor="@color/colorPrimary"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="رقم الاعلان"
+                        android:fontFamily="@font/font_regular"
+                        android:textSize="@dimen/_14sdp"
+                        android:gravity="end"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:textColor="@color/colorPrimary"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="اسم المحول"
+                        android:fontFamily="@font/font_regular"
+                        android:textSize="@dimen/_14sdp"
+                        android:gravity="end"
+
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:textColor="@color/colorPrimary"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="مبلغ التحويل"
+                        android:fontFamily="@font/font_regular"
+                        android:textSize="@dimen/_14sdp"
+                        android:gravity="end"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:textColor="@color/colorPrimary"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="نوع العمليه"
+                        android:fontFamily="@font/font_regular"
+                        android:textSize="@dimen/_14sdp"
+                        android:gravity="end"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:textColor="@color/colorPrimary"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/send_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:cornerRadius="@dimen/_20sdp"
+                android:backgroundTint="@color/colorPrimary"
+                app:icon="@drawable/ic_message"
+                app:iconTint="@color/white"
+                app:iconSize="@dimen/_16sdp"
+                android:fontFamily="@font/font_regular"
+                app:iconGravity="textStart"
+                android:text="ارسال الرقم عن طريق الواتس اب"
+                app:layout_constraintBottom_toTopOf="@+id/view1"
+                app:layout_constraintTop_toBottomOf="@id/layout"/>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/gray"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>

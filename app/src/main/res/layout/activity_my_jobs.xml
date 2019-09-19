@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".ui.activities.my_jobs.MyJobsActivity">
+    tools:context=".ui.activities.seeker.my_jobs.MyJobsActivity">
 
     <include layout="@layout/tool_bar" android:id="@+id/tool_bar"/>
 

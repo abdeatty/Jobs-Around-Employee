@@ -1,4 +1,4 @@
-package com.amaz.jobsaround.ui.activities.my_jobs;
+package com.amaz.jobsaround.ui.activities.seeker.my_jobs;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;

@@ -8,13 +8,12 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.amaz.jobsaround.R;
-import com.amaz.jobsaround.ui.activities.job_seeker_register.JobSeekerRegisterActivity;
 import com.amaz.jobsaround.ui.activities.login.LoginActivity;
-import com.amaz.jobsaround.ui.activities.owner_register.OwnerRegisterActivity;
+import com.amaz.jobsaround.ui.activities.owner.owner_register.OwnerRegisterActivity;
+import com.amaz.jobsaround.ui.activities.seeker.job_seeker_register.JobSeekerRegisterActivity;
 
 public class UserTypeActivity extends AppCompatActivity {
 

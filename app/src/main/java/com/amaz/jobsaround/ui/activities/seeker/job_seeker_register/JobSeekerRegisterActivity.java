@@ -1,4 +1,4 @@
-package com.amaz.jobsaround.ui.activities.job_seeker_register;
+package com.amaz.jobsaround.ui.activities.seeker.job_seeker_register;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
@@ -11,7 +11,7 @@ import android.view.View;
 
 import com.amaz.jobsaround.R;
 import com.amaz.jobsaround.ui.activities.RulesActivity;
-import com.amaz.jobsaround.ui.activities.owner_register.OwnerRegisterActivity;
+
 import com.amaz.jobsaround.ui.fragments.map_dialog.MapDialogFragment;
 
 public class JobSeekerRegisterActivity extends AppCompatActivity {
