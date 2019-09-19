@@ -88,7 +88,7 @@
         android:textSize="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:fontFamily="@font/font_regular"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/blue"
         android:text="رقم الحساب:"/>
 
     <TextView
@@ -115,7 +115,7 @@
         android:textSize="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:fontFamily="@font/font_regular"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/blue"
         android:text="اسم الحساب:"/>
 
     <TextView
@@ -144,7 +144,7 @@
         android:textSize="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:fontFamily="@font/font_regular"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/blue"
         android:text="رقم الايبان:"/>
 
     <TextView
@@ -171,7 +171,7 @@
         android:textSize="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:fontFamily="@font/font_regular"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/blue"
         android:text="البنك:"/>
 
     <TextView
@@ -190,7 +190,7 @@
         android:background="@drawable/rect_white_with_blue_border"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="start"
+        android:gravity="center"
         android:fontFamily="@font/font_regular"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/_12sdp"
@@ -215,6 +215,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/next_btn"
         android:layout_width="wrap_content"
+        android:shadowColor="@color/blue"
         android:layout_height="wrap_content"/>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/next_btn"
@@ -223,8 +224,8 @@
         android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:cornerRadius="@dimen/_20sdp"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
         android:text="التالى"
         android:layout_marginBottom="@dimen/_10sdp"
         android:textSize="@dimen/_14sdp"

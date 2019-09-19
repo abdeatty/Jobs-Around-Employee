@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
+    android:background="@color/white"
     tools:context=".ui.activities.UserTypeActivity">
 
     <include layout="@layout/tool_bar" android:id="@+id/tool_bar"/>
@@ -40,6 +41,9 @@
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="@dimen/_15sdp"
+        app:srcCompat="@drawable/ic_job_seeker"
+        android:padding="@dimen/_8sdp"
+        android:tint="@color/gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/how_are_you_label"
@@ -80,6 +84,9 @@
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="@dimen/_15sdp"
+        app:srcCompat="@drawable/ic_job_seeker"
+        android:padding="@dimen/_8sdp"
+        android:tint="@color/gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/or_label"

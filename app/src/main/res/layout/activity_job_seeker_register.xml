@@ -297,15 +297,19 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_weight="2">
+
+
+                    <RadioButton
+                        android:drawableEnd="@drawable/ic_female"
+                        android:layout_width="wrap_content"
+                        android:drawableTint="@color/pink"
+                        android:layout_height="wrap_content"/>
+
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableEnd="@drawable/ic_drop_down_arrow"/>
-
-                    <RadioButton
-                        android:drawableEnd="@drawable/ic_drop_down_arrow"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:drawableTint="@color/blue"
+                        android:drawableEnd="@drawable/ic_male"/>
                 </RadioGroup>
 
 
@@ -343,6 +347,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/_8sdp"
                     android:drawableStart="@drawable/ic_drop_down_arrow"
                     android:backgroundTint="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -370,6 +375,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/_8sdp"
+
                     android:drawableStart="@drawable/ic_drop_down_arrow"
                     android:backgroundTint="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -396,6 +403,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/_8sdp"
                     android:drawableStart="@drawable/ic_drop_down_arrow"
                     android:backgroundTint="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -599,7 +607,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
-                android:src="@mipmap/ic_launcher"
+                android:src="@drawable/ic_map"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:onClick="onClick1"
                 android:layout_marginStart="@dimen/_20sdp"
@@ -629,7 +637,8 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:drawableStart="@drawable/ic_drop_down_arrow"
+                                android:drawablePadding="@dimen/_8sdp"
+                                android:drawableStart="@drawable/ic_upload"
                                 android:backgroundTint="@color/white"/>
                         </com.google.android.material.textfield.TextInputLayout>
 

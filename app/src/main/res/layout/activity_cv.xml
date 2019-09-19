@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="ltr"
     tools:context=".ui.activities.cv.CVActivity">
 
-    <include layout="@layout/tool_bar" android:id="@+id/tool_bar"/>
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -22,341 +25,440 @@
                 android:id="@+id/view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
-                android:background="@android:color/holo_blue_bright"
-                app:layout_constraintTop_toTopOf="parent"/>
+                android:background="@color/off_whit"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_pic_iv"
                 android:layout_width="@dimen/_80sdp"
                 android:layout_height="@dimen/_80sdp"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:elevation="@dimen/_4sdp"
                 android:src="@drawable/ic_photo"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_upload"
+                android:layout_margin="@dimen/_10sdp"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view"/>
 
             <TextView
                 android:id="@+id/profile_name_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="محمد على"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
                 android:gravity="center"
+                android:text="محمد على"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/font_regular"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:layout_constraintTop_toBottomOf="@id/profile_pic_iv"/>
+                app:layout_constraintTop_toBottomOf="@id/profile_pic_iv" />
 
             <TextView
                 android:id="@+id/profile_mail_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ahmedmensh8@gmail.com"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
                 android:gravity="center"
+                android:text="ahmedmensh8@gmail.com"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/font_regular"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:layout_constraintTop_toBottomOf="@id/profile_name_tv"/>
+                app:layout_constraintTop_toBottomOf="@id/profile_name_tv" />
 
             <TextView
                 android:id="@+id/profile_phone_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+0201090921278"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
                 android:gravity="center"
+                android:text="+0201090921278"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/font_regular"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:layout_constraintTop_toBottomOf="@id/profile_mail_tv"/>
+                app:layout_constraintTop_toBottomOf="@id/profile_mail_tv" />
 
             <TextView
                 android:id="@+id/profile_education_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="بكالوريوس هندسه"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/font_regular"
                 android:gravity="center"
-                android:textStyle="bold"
+                android:text="بكالوريوس هندسه"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/font_regular"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:layout_constraintTop_toBottomOf="@id/profile_phone_tv"/>
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/profile_phone_tv" />
 
             <TextView
                 android:id="@+id/profile_gender_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/_14sdp"
-                android:text="ذكر"
-                app:layout_constraintHorizontal_bias=".8"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:fontFamily="@font/font_regular"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:layout_constraintTop_toBottomOf="@id/profile_education_tv"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:text="ذكر"
+
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                android:drawableTint="@color/colorPrimary"
+                android:drawablePadding="@dimen/_4sdp"
+                android:drawableEnd="@drawable/ic_gender_male"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".84"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_education_tv" />
 
             <TextView
                 android:id="@+id/profile_nationality_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/_14sdp"
-                android:text="سعودى"
-                app:layout_constraintHorizontal_bias=".32"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:fontFamily="@font/font_regular"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:layout_constraintTop_toBottomOf="@id/profile_education_tv"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:text="سعودى"
+                android:scaleX=".7"
+                android:scaleY=".7"
+                android:drawableEnd="@drawable/ic_pin"
+                android:drawableTint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".28"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_education_tv" />
 
             <TextView
                 android:id="@+id/profile_birth_date_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/_14sdp"
-                android:text="18-10-2018"
-                app:layout_constraintHorizontal_bias=".8"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:fontFamily="@font/font_regular"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:layout_constraintTop_toBottomOf="@id/profile_gender_tv"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:text="18-10-2018"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:drawablePadding="@dimen/_4sdp"
+                android:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_gender_tv" />
 
             <TextView
                 android:id="@+id/profile_old_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/_14sdp"
-                android:text="25 سنه"
-                app:layout_constraintHorizontal_bias=".32"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_2sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:fontFamily="@font/font_regular"
-                android:layout_marginTop="@dimen/_10sdp"
-                app:layout_constraintTop_toBottomOf="@id/profile_nationality_tv"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:text="25 سنه"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_18sdp"
+                android:drawableEnd="@drawable/ic_male"
+                android:drawableTint="@color/colorPrimary"
+                android:drawablePadding="@dimen/_4sdp"
+                android:scaleX=".8"
+                android:scaleY=".8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_nationality_tv" />
 
             <ImageView
                 android:id="@+id/map_iv"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
-                android:src="@drawable/ic_photo"
-                android:scaleType="fitXY"
-                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_30sdp"
-                app:layout_constraintTop_toBottomOf="@id/profile_birth_date_tv"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_photo"
+                app:layout_constraintTop_toBottomOf="@id/profile_birth_date_tv" />
 
             <LinearLayout
                 android:id="@+id/layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
                 app:layout_constraintTop_toBottomOf="@id/map_iv">
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/off_whit"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_5sdp">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:fontFamily="@font/font_regular"
                         android:text="بكالوريوس هندسه"
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="12 سنه"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="دوام كامل"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="متوسط"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:padding="@dimen/_4sdp"
-
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
 
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="12,00 مشاهده"
-                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_weight="1"
                         android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
+                        android:text="التخصص"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="منذ 12 يوم"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="منذ 12 يوم"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_marginEnd="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_5sdp">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="التخصص"
+                        android:layout_weight="1"
                         android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
+                        android:text="12 سنه"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font_regular"
                         android:text="عدد سنوات الخبره"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="نوع الدوام"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="مستوى اللغه الانجليزيه"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="عدد المشاهدات"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="اخر تحديث"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="السيره الذاتيه"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:fontFamily="@font/font_regular"
-                        android:textSize="@dimen/_16sdp"
-                        android:textColor="@color/colorPrimary"/>
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/off_whit"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font_regular"
+                        android:text="دوام كامل"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font_regular"
+                        android:text="نوع الدوام"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font_regular"
+                        android:text="جيد"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font_regular"
+                        android:text="مستوى اللغه الانجليزيه"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/off_whit"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font_regular"
+                        android:text="12,000 مشاهده"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font_regular"
+                        android:text="عدد المشاهدات"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:fontFamily="@font/font_regular"
+                        android:text="منذ 12 يوم"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font_regular"
+                        android:text="اخر تحديث"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/off_whit"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/_20sdp"
+                        app:srcCompat="@drawable/ic_download"
+                        android:tint="@color/colorPrimary"
+
+
+                    />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/font_regular"
+                        android:text="السيره الذاتيه"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/layout1"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
+
                 app:layout_constraintTop_toBottomOf="@id/layout"
-
-                app:layout_goneMarginTop="@dimen/_10sdp"
-                android:layout_height="wrap_content">
+                app:layout_goneMarginTop="@dimen/_10sdp">
 
                 <TextView
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_star"
+                    android:fontFamily="@font/font_regular"
+                    android:gravity="center"
                     android:text="تحديث"
-                    android:drawableTop="@drawable/ic_star"
-                    android:gravity="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/_16sdp"
-                    android:fontFamily="@font/font_regular"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="@dimen/_16sdp" />
 
 
                 <TextView
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_star"
+                    android:fontFamily="@font/font_regular"
+                    android:gravity="center"
                     android:text="تعديل"
-                    android:drawableTop="@drawable/ic_star"
-                    android:gravity="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/_16sdp"
-                    android:fontFamily="@font/font_regular"
-                    android:layout_height="wrap_content"/>
-
+                    android:textSize="@dimen/_16sdp" />
 
 
                 <TextView
                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="حذف"
                     android:drawableTop="@drawable/ic_star"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/_16sdp"
                     android:fontFamily="@font/font_regular"
-                    android:layout_height="wrap_content"/>
+                    android:gravity="center"
+                    android:text="حذف"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_16sdp" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
