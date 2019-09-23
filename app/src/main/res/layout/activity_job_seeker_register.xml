@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layoutDirection="ltr"
-    tools:context=".ui.activities.job_seeker_register.JobSeekerRegisterActivity">
+    tools:context=".ui.activities.seeker.job_seeker_register.JobSeekerRegisterActivity">
 
     <include
         android:id="@+id/tool_bar"
@@ -347,9 +347,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:drawablePadding="@dimen/_8sdp"
+                    android:backgroundTint="@color/white"
                     android:drawableStart="@drawable/ic_drop_down_arrow"
-                    android:backgroundTint="@color/white"/>
+                    android:drawablePadding="@dimen/_8sdp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -465,7 +465,10 @@
 
                     android:layout_marginTop="@dimen/_10sdp"
                     android:orientation="horizontal">
+
+
                     <TextView
+                        android:id="@+id/english_level_good_tv"
                         android:layout_width="0dp"
                         android:text="جيد"
 
@@ -476,6 +479,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"/>
                     <TextView
+                        android:id="@+id/english_level_intermediate_tv"
                         android:layout_width="0dp"
                         android:text="متوسط"
                         android:padding="@dimen/_4sdp"
@@ -487,6 +491,7 @@
                         android:layout_weight="1"/>
 
                     <TextView
+                        android:id="@+id/english_level_beginner_tv"
                         android:layout_width="0dp"
                         android:text="مبتدئ"
 
@@ -563,6 +568,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/both_partial_and_part_job_type_tv"
                     android:layout_width="0dp"
                     android:text="الكل"
 
@@ -573,6 +579,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"/>
                 <TextView
+                    android:id="@+id/partial_job_type_tv"
                     android:layout_width="0dp"
                     android:text="جزئي"
                     android:padding="@dimen/_4sdp"
@@ -584,6 +591,7 @@
                     android:layout_weight="1"/>
 
                 <TextView
+                    android:id="@+id/full_time_job_type_tv"
                     android:layout_width="0dp"
                     android:text="كامل"
 
@@ -609,7 +617,7 @@
                 android:layout_height="@dimen/_60sdp"
                 android:src="@drawable/ic_map"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:onClick="onClick1"
+                android:id="@+id/map_iv"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:scaleType="fitXY"/>
@@ -695,6 +703,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_45sdp"
                 android:layout_marginTop="@dimen/_10sdp"
@@ -703,7 +712,6 @@
                 android:visibility="visible"
                 android:paddingStart="@dimen/_20sdp"
                 android:paddingEnd="@dimen/_20sdp"
-                android:onClick="onClick"
                 android:fontFamily="@font/font_regular"
                 android:text="حفظ وارسال رمز التحقق"
                 android:layout_marginStart="@dimen/_40sdp"

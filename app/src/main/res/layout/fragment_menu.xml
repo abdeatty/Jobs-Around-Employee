@@ -19,6 +19,7 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:orientation="horizontal">
         <TextView
+            android:id="@+id/experience_tv"
             android:layout_width="0dp"
             android:text="الخبره"
 
@@ -29,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
         <TextView
+            android:id="@+id/qualifications_tv"
             android:layout_width="0dp"
             android:text="المؤهل"
             android:padding="@dimen/_7sdp"
@@ -40,6 +42,7 @@
             android:layout_weight="1"/>
 
         <TextView
+            android:id="@+id/job_tv"
             android:layout_width="0dp"
             android:text="الوظيفه"
 

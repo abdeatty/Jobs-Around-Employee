@@ -8,14 +8,14 @@ import com.amaz.jobsaround.R;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
 
-public class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
+public class CustomCompanyInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
 
     private final View mWindow;
     private final Context mContext;
 
-    public CustomInfoWindowAdapter(Context mContext) {
+    public CustomCompanyInfoWindowAdapter(Context mContext) {
         this.mContext = mContext;
-        mWindow = LayoutInflater.from(mContext).inflate(R.layout.marker_info_window_content_layout,null);
+        mWindow = LayoutInflater.from(mContext).inflate(R.layout.company_marker_info_window_content_layout,null);
     }
 
     @Override

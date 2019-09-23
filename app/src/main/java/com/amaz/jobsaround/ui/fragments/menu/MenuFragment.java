@@ -16,12 +16,12 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.amaz.jobsaround.R;
-import com.amaz.jobsaround.adapters.CustomInfoWindowAdapter;
+import com.amaz.jobsaround.adapters.CustomCompanyInfoWindowAdapter;
+import com.amaz.jobsaround.adapters.CustomEmployeeInfoWindowAdapter;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -36,12 +36,13 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MenuFragment extends Fragment implements OnMapReadyCallback {
+public class MenuFragment extends Fragment implements OnMapReadyCallback , GoogleMap.OnMarkerClickListener {
 
     private static final String TAG = "MenuFragment";
     private static final String MAPVIEW_BUNDLE_KEY = "Map Bundle";
@@ -49,6 +50,9 @@ public class MenuFragment extends Fragment implements OnMapReadyCallback {
     private Unbinder unbinder;
     @BindView(R.id.map_view)
     MapView mMapView;
+    @BindView(R.id.experience_tv) TextView experienceTv;
+    @BindView(R.id.qualifications_tv) TextView qualificationsTv;
+    @BindView(R.id.job_tv) TextView jobTv;
     private GoogleMap mGoogleMap;
 
     public MenuFragment() {
@@ -108,6 +112,8 @@ public class MenuFragment extends Fragment implements OnMapReadyCallback {
             return;
         }
 
+        mGoogleMap.setOnMarkerClickListener(this);
+
     }
 
     private void addMarkersToMap(){
@@ -122,7 +128,7 @@ public class MenuFragment extends Fragment implements OnMapReadyCallback {
 //                );
 //                marker.setTag(i + "");
 
-                CustomInfoWindowAdapter customInfoWindowAdapter = new CustomInfoWindowAdapter(getContext());
+                CustomCompanyInfoWindowAdapter customInfoWindowAdapter = new CustomCompanyInfoWindowAdapter(getContext());
                 View markerView = ((LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.map_marker_layout, null);
                 TextView tv_marker_text =  markerView.findViewById(R.id.tv_marker_text);
 
@@ -130,7 +136,10 @@ public class MenuFragment extends Fragment implements OnMapReadyCallback {
                         .position(new LatLng(latLngList.get(i).latitude,latLngList.get(i).longitude)));
                         marker.setIcon(BitmapDescriptorFactory.fromBitmap(createDrawableFromView(getContext(), markerView)));
 
-                        mGoogleMap.setInfoWindowAdapter(customInfoWindowAdapter);
+
+                        if ((i / 2) == 0) marker.setTag("employee");
+                        else  marker.setTag("company");
+//                        mGoogleMap.setInfoWindowAdapter(customInfoWindowAdapter);
                 mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latLngList.get(i).latitude, latLngList.get(i).longitude), 12.0f));
             }
 
@@ -189,5 +198,35 @@ public class MenuFragment extends Fragment implements OnMapReadyCallback {
     public void onLowMemory() {
         super.onLowMemory();
         mMapView.onLowMemory();
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        if (marker.getTag().equals("company"))
+        mGoogleMap.setInfoWindowAdapter(new CustomCompanyInfoWindowAdapter(getContext()));
+        else mGoogleMap.setInfoWindowAdapter(new CustomEmployeeInfoWindowAdapter(getContext()));
+        return false;
+    }
+
+    @OnClick(R.id.experience_tv)
+    public void onExperienceTextViewClicked(){
+        jobTv.setBackground(null);
+        qualificationsTv.setBackground(null);
+        experienceTv.setBackground(getResources().getDrawable(R.drawable.rect_light_blue));
+    }
+
+    @OnClick(R.id.qualifications_tv)
+    public void onQualificationsTextViewClicked(){
+        jobTv.setBackground(null);
+        experienceTv.setBackground(null);
+        qualificationsTv.setBackground(getResources().getDrawable(R.drawable.rect_light_blue));
+    }
+
+
+    @OnClick(R.id.job_tv)
+    public void onJobTextViewClicked(){
+        experienceTv.setBackground(null);
+        qualificationsTv.setBackground(null);
+        jobTv.setBackground(getResources().getDrawable(R.drawable.rect_light_blue));
     }
 }
