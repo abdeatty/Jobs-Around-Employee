@@ -728,42 +728,47 @@
                 android:visibility="gone"
                 app:layout_goneMarginTop="@dimen/_10sdp"
                 android:layout_height="wrap_content">
-
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:text="تحديث"
-                    android:drawableTop="@drawable/ic_star"
+                    android:text="تعطيل"
+                    android:drawableTint="@color/colorPrimary"
+                    android:drawableTop="@drawable/ic_power"
                     android:gravity="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/_16sdp"
                     android:fontFamily="@font/font_regular"
                     android:layout_height="wrap_content"/>
+
+
 
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:text="حفظ"
-                    android:drawableTop="@drawable/ic_star"
+                    android:drawableTint="@color/colorPrimary"
+                    android:drawableTop="@drawable/ic_verified"
                     android:gravity="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/_16sdp"
                     android:fontFamily="@font/font_regular"
                     android:layout_height="wrap_content"/>
-
 
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:text="تعطيل"
-                    android:drawableTop="@drawable/ic_star"
+                    android:text="تحديث"
+                    android:drawableTint="@color/colorPrimary"
+                    android:drawableTop="@drawable/ic_recycle"
                     android:gravity="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/_16sdp"
                     android:fontFamily="@font/font_regular"
                     android:layout_height="wrap_content"/>
+
+
             </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
